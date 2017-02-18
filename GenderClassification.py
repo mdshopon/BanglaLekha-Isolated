@@ -88,10 +88,13 @@ print(imageFullName[0])
 for i in range(len(dataLabel)):
     Max=max(Max,dataLabel[i])
 
+
+''' This Portion is for Labeling and Dividing the dataset. Each sample Contains 1800 Images. Total 84 Samples '''    
 X_train = []
 X_test = []
 y_train=[]
 y_test=[]
+
 from collections import defaultdict
 Dict=defaultdict(lambda:None)
 
