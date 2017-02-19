@@ -83,6 +83,8 @@ def dataset_load(path):
     return data
 
 data, dataLabel, dataMarking, imageFullName = dataset_load('./FullData.pkl.gz')
+
+
 Max=0
 print(imageFullName[0])
 for i in range(len(dataLabel)):
@@ -104,13 +106,14 @@ for i in range(len(dataLabel)):
         Dict[dataLabel[i]]=Dict[dataLabel[i]]+1
 
     if(Dict[dataLabel[i]]>1800):
-        # data[i]=cv2.resize(data[i],(28,28))
-        X_test.append(data[i])
+        Value = data[i]
+        NV = cv2.resize(Value, (28, 28))
+        X_test.append(NV)
         y_test.append(dataLabel[i])
     else:
-        # data[i]=cv2.fromarray()
-        # data[i] = cv2.resize(data[i], (28, 28))
-        X_train.append(data[i])
+        Value=data[i]
+        NV = cv2.resize(Value, (28, 28))
+        X_train.append(NV)
         y_train.append(dataLabel[i])
 
 batch_size = 128
@@ -118,7 +121,7 @@ nb_classes = 84
 nb_epoch = 15
 
 # input image dimensions
-img_rows, img_cols = 56, 56
+img_rows, img_cols = 28,28
 # number of convolutional filters to use
 nb_filters = 32
 # size of pooling area for max pooling
