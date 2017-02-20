@@ -146,8 +146,3 @@ model.add(Activation('tanh'))
 
 model.compile(loss='mean_squared_error', optimizer='rmsprop')
 model.fit(X_train, y_train, batch_size=128, nb_epoch=5, verbose=1)
-
-score=model.score(X_test,y_test)
-
-print(score[0])
-print(score[1])
