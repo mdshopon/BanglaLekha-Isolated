@@ -1,77 +1,14 @@
 from __future__ import print_function
-from keras.layers import Input, Dense, Convolution2D, MaxPooling2D, UpSampling2D
-from keras.models import Model
-import matplotlib.pyplot as plt
 import numpy as np
 
 np.random.seed(1337)  # for reproducibility
-from keras import  callbacks
-from keras.datasets import mnist,cifar10
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
-from keras.utils import np_utils
-from PIL import Image
-from os import listdir
-from keras.models import load_model
-from os.path import isfile, join
-import PIL.ImageOps
-import matplotlib.cm as cm
 import numpy as np
-from skimage import color
-from skimage import io
-import pickle
-# import cv
-import cv2
-import matplotlib.pyplot as plt
-import os
-from keras.preprocessing.image import ImageDataGenerator
-from matplotlib import pyplot
-from keras.regularizers import l2, activity_l2
-from keras.datasets import mnist,cifar10
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten
-from keras.layers import Convolution2D, MaxPooling2D
-from keras.utils import np_utils
-from PIL import Image
-from os import listdir
-from keras.models import load_model
-from os.path import isfile, join
-import PIL.ImageOps
-import matplotlib.cm as cm
-import numpy as np
-from keras.callbacks import ModelCheckpoint
-from skimage import color
-from skimage import io
-import pickle
-# import cv
-import cv2
-import matplotlib.pyplot as plt
-import os
-from keras.preprocessing.image import ImageDataGenerator
-from matplotlib import pyplot
-from keras.regularizers import l2, activity_l2
-from skimage.transform import resize
-import scipy
-from keras.callbacks import TensorBoard
-from skimage.transform import resize
-import scipy
-from keras.callbacks import TensorBoard
 import cPickle,gzip,sys
-
-import random
-
-import matplotlib.pyplot as plt
 from skimage.feature import hog
 from skimage import data, color, exposure
-from scipy.spatial import distance
-import math
-from sklearn.metrics.pairwise import euclidean_distances
-from keras.wrappers.scikit_learn import KerasRegressor
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import KFold
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
 
 
 def HOG_FEATURE(path):
